@@ -18,8 +18,8 @@ class QuizResultActivity : AppCompatActivity() {
         setContentView(binding.root)
         val getCorrectAnswers: Int = intent.getIntExtra("correct", 0)
         val getInCorrectAnswers: Int = intent.getIntExtra("incorrect", 0)
-        binding.correctAnswer.text = "Correct answers - $getCorrectAnswers"
-        binding.inCorrectAnswer.text = "Incorrect answers - $getInCorrectAnswers"
+        binding.correctAnswer.text = "True answers: $getCorrectAnswers"
+        binding.inCorrectAnswer.text = "False answers: $getInCorrectAnswers"
         binding.startAgain.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
